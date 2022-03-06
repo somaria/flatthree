@@ -18,8 +18,6 @@ let dataone: DataProps[] = [
   },
 ]
 
-let datatwo: DataProps[] = []
-
 function App() {
   useEffect(() => {
     dataone = _.map(dataone, (item) => ({
