@@ -7,7 +7,7 @@ interface DataProps {
   created_at: string
 }
 
-const dataone: DataProps[] = [
+let dataone: DataProps[] = [
   {
     clazz_name: '1A',
     created_at: '2022-01-19T09:13:42.149+08:00',
@@ -22,11 +22,11 @@ let datatwo: DataProps[] = []
 
 function App() {
   useEffect(() => {
-    const datatwo = _.map(dataone, (item) => ({
+    dataone = _.map(dataone, (item) => ({
       ...item,
       created_at: moment(item.created_at).format('MMM'),
     }))
-    console.log(datatwo)
+    console.log(dataone)
   }, [])
 
   return <div>Test</div>
